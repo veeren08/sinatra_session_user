@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Editor's picks manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Editor's picks manager" />
+    <link href="<%= base_url %>/images/favicon.ico" rel="shortcut icon" type="image/ico" />
+
+    <link rel="stylesheet" href="<%= base_url %>/css/styles.min.css?v=1" />
+  </head>
+  <body>
+    <div class="mx-auto max-w-5xl md:py-8 lg:py-8">
+      <div class="module">
+        <div id="title" class="text-4xl font-bold tracking-tight mb-4">
+          Sinatra 2FA
+        </div>
+        <div>
+        <% if current_user %>
+          <p>Welcome, <%= current_user.email %>!</p>
+          <a href="/logout" class="btn btn-primary">Logout</a>
+        <% else %>
+          <% if request.path_info == '/login' || request.path_info == '/' %>
+            <a href="/signup" class="btn btn-primary">Signup</a>
+          <% end %>
+          <% if request.path_info == '/signup' || request.path_info == '/' %>
+            <a href="/login" class="btn btn-primary">Login</a>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+      <%= partial 'shared/flash' %>
+
+      <%= yield %>
+    </div>
+    <script src="<%= base_url %>/js/sortable-table.js"></script>
+  </body>
+</html>

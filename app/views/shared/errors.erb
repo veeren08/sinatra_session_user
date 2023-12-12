@@ -1,0 +1,11 @@
+<!-- errors.erb -->
+
+<% if @errors && @errors.any? %>
+  <div class="py-5 text-red-700 bg-nserror">
+    <ul class="list-disc list-inside ms-8">
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<!-- signup.erb -->
+
+<div class="row justify-content-center">
+  <div class="col-6">
+    <div class="module">
+      <h1>Create New User</h1>
+    </div>
+
+    <%= partial 'shared/errors' %>
+
+    <form action="/signup" method="post">
+      <%= partial 'users/form_fields' %>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
