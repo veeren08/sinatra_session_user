@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+    @apply underline;
+}
+
+.btn {
+    @apply py-2 px-4 font-semibold rounded-lg shadow-md;
+}
+
+a.btn {
+    @apply no-underline;
+}
+
+.btn-primary {
+    @apply text-white bg-blue-500 hover:bg-blue-700;
+}
+
+.label {
+    @apply w-full py-2 rounded-lg text-left border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+.form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+}
+
+textarea.form-input {
+    @apply h-20;
+}
+
+.btn {
+    @apply inline-flex justify-center align-middle items-center mt-4 px-4 py-2 bg-[#FF7F50] hover:bg-nslightgray border-nsgray text-white rounded-md whitespace-nowrap;
+}
+
+.btn-danger {
+    @apply inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:mt-0 sm:w-auto;
+}
+
+.btn-cancel {
+    @apply mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto;
+}
+
+.btn-action {
+    @apply inline-flex w-full justify-center rounded-md bg-white px-3 py-2 mx-1 my-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto;
+}
+
+.btn-back {
+    @apply mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold shadow-sm ring-1 ring-inset ring-gray-300 text-gray-700 bg-gray-200 hover:bg-gray-400 sm:mt-0 sm:w-auto;
+}
+
+.module {
+    @apply flex justify-between items-center mb-5;
+}
+
+h1 {
+    @apply text-3xl font-semibold mb-5;
+}
+
+h2 {
+    @apply text-2xl mb-4 mt-10 font-semibold;
+}
+
+table.table {
+    @apply w-full bg-white;
+}
+
+table.table tr td,
+table.table tr th {
+    @apply text-left border border-gray-200 py-1 px-2;
+}
+
+table.table tr th {
+    @apply bg-gray-300;
+}
+
+table.table td.actions
+table.table td.centered,
+table.table th.centered {
+    @apply text-center;
+}
+
+table.table td.actions .btn {
+    @apply text-xs;
+}
+
+table.table td.datetime {
+    @apply text-xs;
+}
+
+table.table .col-datetime {
+    width: 12%;
+}
+
+table.table .col-position {
+    width: 6% !important;
+}
+
+table.table .col-title, table.table .title {
+    width: 38% !important;
+}
+
+table.table .col-source {
+    width: 20% !important;
+}
+
+table.table .col-actions {
+    width: 24% !important;
+}
+
+table.table .col-action-1 {
+    width: 7% !important;
+}
+
+table.table  td.non-existing-source {
+    background-color: #FFFACD;
+}
+
+.label {
+    @apply block text-sm font-medium text-gray-700;
+}
+
+.pagy-nav.pagination {
+    @apply isolate inline-flex -space-x-px rounded-md shadow-sm;
+}
+
+.page.next a {
+    @apply relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page.prev a {
+    @apply relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page.next.disabled {
+    @apply relative inline-flex items-center rounded-r-md border border-gray-300 bg-slate-100 px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page.prev.disabled {
+    @apply relative inline-flex items-center rounded-l-md border border-gray-300 bg-slate-100 px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20;
+}
+
+.page a, .page.gap {
+    @apply bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:z-20;
+}
+
+.page.active {
+    @apply z-10 border-indigo-500 bg-indigo-50 text-indigo-600 relative inline-flex items-center border px-4 py-2 text-sm font-medium focus:z-20;
+}
+
+/* Drag-n-drop table*/
+.clone-list {
+    @apply !static;
+}
+
+.placeholder {
+    @apply bg-[#edf2f7] border-[2px] border-dashed border-[#cbd5e0]
+}
+
+.draggable {
+    @apply cursor-move select-none;
+}
+
+.dragging {
+    @apply bg-white border-t-[1px] border-t-[solid] border-t-[#ccc] z-[999]
+}

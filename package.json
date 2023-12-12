@@ -1,0 +1,12 @@
+{
+  "name": "editors-picks-manager",
+  "version": "1.0.0",
+  "repository": "git@github.com:ipdgroup/editors-picks-manager.git",
+  "scripts": {
+    "build": "tailwindcss -i ./frontend/styles.css -o ./public/css/styles.min.css -m",
+    "start": "tailwindcss -i ./frontend/styles.css -o ./public/css/styles.min.css -m --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
